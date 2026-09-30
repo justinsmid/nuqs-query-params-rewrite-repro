@@ -15,6 +15,7 @@ const page = await browser.newPage()
 await page.goto(start)
 await page.getByTestId("search").fill("test")
 await page.waitForTimeout(500)
+console.log("PAGE:", (await page.locator("pre").allInnerTexts()).join(" | "))
 
 console.log("BEFORE:", start, "(redirects to the returnUrl page)")
 console.log("AFTER: ", page.url())
