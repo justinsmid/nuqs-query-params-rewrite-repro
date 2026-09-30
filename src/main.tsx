@@ -25,7 +25,7 @@ function SearchBox() {
       <Link to="/" data-testid="reset">
         Reset
       </Link>
-      <pre>URL: {url.pathname + url.search}</pre>
+      <pre>URL: {url.href}</pre>
       <pre>returnUrl: {url.searchParams.get("returnUrl")}</pre>
     </>
   )
