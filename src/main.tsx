@@ -4,7 +4,6 @@ import {
   createRouter,
   Link,
   Outlet,
-  useLocation,
   redirect,
   RouterProvider,
 } from "@tanstack/react-router"
@@ -14,7 +13,6 @@ import { createRoot } from "react-dom/client"
 
 function SearchBox() {
   const [search, setSearch] = useQueryState("search", parseAsString.withDefault(""))
-  useLocation({ select: (location) => location.searchStr })
   const url = new URL(window.location.href)
   return (
     <>
